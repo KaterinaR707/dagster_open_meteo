@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+space_x_project/__init__.py
+space_x_project/assets.py
+space_x_project.egg-info/PKG-INFO
+space_x_project.egg-info/SOURCES.txt
+space_x_project.egg-info/dependency_links.txt
+space_x_project.egg-info/requires.txt
+space_x_project.egg-info/top_level.txt
