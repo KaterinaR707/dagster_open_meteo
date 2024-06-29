@@ -1,42 +1,42 @@
-from dagster import asset, graph_asset, op, Out, OpExecutionContext
-from ..resources.resources import ConnectionOpenMeteo
+from dagster import op, Out, OpExecutionContext, asset
+from weather_open_meteo.resources.resources import ConnectionOpenMeteo
 from typing import Tuple
-import constants
+from weather_open_meteo.assets import constants
 import sqlite3
 import yaml
 
 
-@op(out={"weather_data": Out(), "city_data": Out()},)
-def load_data_from_api(
-    url: str,
+@asset
+def data_from_api(
+    url_path,
     city_data:dict, 
     connection: ConnectionOpenMeteo,
-    type: str,
+    type_op: str,
     period: str,
     config_path:str
 ) -> Tuple[dict, dict]:
     
     weather_data = connection.request(
-        url=url,
+        url_path=url_path,
         params_city=city_data,
         config_path=config_path,
         period=period,
-        type=type
+        type_op=type_op
     )
     
     return (weather_data, city_data)
     
-@op
-def insert_data_in_sqlite(
+@asset
+def data_in_sqlite(
     context: OpExecutionContext,
     city_data,
     weather_data,
     table_name: str,
     data_schema_path: str,
-    type: str,
+    type_op: str,
     config_path: str
 ):
-    table_name = f"{table_name}_{type}"
+    table_name = f"{table_name}_{type_op}"
     conn = sqlite3.connect("weather_data.db")
     cursor = conn.cursor()
 
@@ -75,7 +75,7 @@ def insert_data_in_sqlite(
         )
         conn.commit()
         
-        context.log.info(f"Succesfully insert data for {weather_data["date"]} in {table_name}")
+        context.log.info(f"Succesfully insert data for {weather_data['date']} in {table_name}")
         
     except sqlite3.Error as e:
         print(f"An error occurred: {e}")

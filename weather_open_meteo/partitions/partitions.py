@@ -1,5 +1,5 @@
 from dagster import DailyPartitionsDefinition
-from ..assets import constants
+from weather_open_meteo.assets import constants
 
 start_date = constants.START_DATE
 end_date = constants.END_DATE

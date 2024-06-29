@@ -1,4 +1,3 @@
-repositories:
-  - repository: weather_open_meteo
-    module: weather_open_meteo
-    location: /Users/katerinaryabchuk/Documents/dagster_open_meteo
+load_from:
+  - python_file:
+      relative_path: weather_open_meteo
