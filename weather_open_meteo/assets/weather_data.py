@@ -21,7 +21,7 @@ def raw_data():
         
         weather_archive_data, city_data = data_from_api(
             url_path=constants.OPEN_METEO_URL_ARCHIVE,
-            city_data=load_data(city_data),
+            city_data=city_data,
             type_op=constants.TYPES[1],
             period=constants.PERIOD_ARCHIVE,
             config_path=constants.WEATHER_CONFIG
