@@ -1,0 +1,4 @@
+locations:
+  - location_name: weather_open_meteo
+    code_source:
+      package_name: weather_open_meteo

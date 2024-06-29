@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+weather_open_meteo/__init__.py
+weather_open_meteo/assets.py
+weather_open_meteo.egg-info/PKG-INFO
+weather_open_meteo.egg-info/SOURCES.txt
+weather_open_meteo.egg-info/dependency_links.txt
+weather_open_meteo.egg-info/requires.txt
+weather_open_meteo.egg-info/top_level.txt

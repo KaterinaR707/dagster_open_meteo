@@ -1,0 +1,146 @@
+PARAMS_EU_CAPITALS:
+  - city: Vienna
+    params:
+      latitude: 48.2082
+      longitude: 16.3738
+      timezone: GMT
+  - city: Brussels
+    params:
+      latitude: 50.8503
+      longitude: 4.3517
+      timezone: GMT
+  - city: Sofia
+    params:
+      latitude: 42.6977
+      longitude: 23.3219
+      timezone: GMT
+  - city: Zagreb
+    params:
+      latitude: 45.8150
+      longitude: 15.9819
+      timezone: GMT
+  - city: Nicosia
+    params:
+      latitude: 35.1856
+      longitude: 33.3823
+      timezone: GMT+2
+  - city: Prague
+    params:
+      latitude: 50.0755
+      longitude: 14.4378
+      timezone: GMT
+  - city: Copenhagen
+    params:
+      latitude: 55.6761
+      longitude: 12.5683
+      timezone: GMT
+  - city: Tallinn
+    params:
+      latitude: 59.4370
+      longitude: 24.7535
+      timezone: GMT+3
+  - city: Helsinki
+    params:
+      latitude: 60.1695
+      longitude: 24.9354
+      timezone: GMT+3
+  - city: Paris
+    params:
+      latitude: 48.8566
+      longitude: 2.3522
+      timezone: GMT
+  - city: Berlin
+    params:
+      latitude: 52.5200
+      longitude: 13.4050
+      timezone: GMT
+  - city: Athens
+    params:
+      latitude: 37.9838
+      longitude: 23.7275
+      timezone: GMT+3
+  - city: Budapest
+    params:
+      latitude: 47.4979
+      longitude: 19.0402
+      timezone: GMT
+  - city: Dublin
+    params:
+      latitude: 53.3498
+      longitude: -6.2603
+      timezone: GMT
+  - city: Rome
+    params:
+      latitude: 41.9028
+      longitude: 12.4964
+      timezone: GMT+1
+  - city: Riga
+    params:
+      latitude: 56.9496
+      longitude: 24.1052
+      timezone: GMT+3
+  - city: Vilnius
+    params:
+      latitude: 54.6872
+      longitude: 25.2797
+      timezone: GMT+3
+  - city: Luxembourg
+    params:
+      latitude: 49.6117
+      longitude: 6.1319
+      timezone: GMT
+  - city: Valletta
+    params:
+      latitude: 35.8997
+      longitude: 14.5147
+      timezone: GMT+2
+  - city: Amsterdam
+    params:
+      latitude: 52.3676
+      longitude: 4.9041
+      timezone: GMT
+  - city: Warsaw
+    params:
+      latitude: 52.2297
+      longitude: 21.0122
+      timezone: GMT+2
+  - city: Lisbon
+    params:
+      latitude: 38.7223
+      longitude: -9.1393
+      timezone: GMT
+  - city: Bucharest
+    params:
+      latitude: 44.4268
+      longitude: 26.1025
+      timezone: GMT+3
+  - city: Bratislava
+    params:
+      latitude: 48.1486
+      longitude: 17.1077
+      timezone: GMT
+  - city: Ljubljana
+    params:
+      latitude: 46.0569
+      longitude: 14.5058
+      timezone: GMT
+  - city: Madrid
+    params:
+      latitude: 40.4168
+      longitude: -3.7038
+      timezone: GMT
+  - city: Stockholm
+    params:
+      latitude: 59.3293
+      longitude: 18.0686
+      timezone: GMT+2
+  - city: London
+    params:
+      latitude: 51.5074
+      longitude: -0.1278
+      timezone: GMT
+  - city: Kyiv
+    params:
+      latitude: 50.4501
+      longitude: 30.5234
+      timezone: GMT+3

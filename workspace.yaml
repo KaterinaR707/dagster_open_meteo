@@ -1,0 +1,4 @@
+repositories:
+  - repository: weather_open_meteo
+    module: weather_open_meteo
+    location: /Users/katerinaryabchuk/Documents/dagster_open_meteo
