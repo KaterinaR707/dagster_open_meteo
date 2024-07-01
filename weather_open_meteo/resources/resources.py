@@ -62,4 +62,7 @@ class ConnectionOpenMeteo(ConfigurableResource):
             daily_data[var_name] = daily.Variables(i).ValuesAsNumpy().tolist()
 
         return daily_data
-    
+
+@resource
+def connection_resource():
+    return ConnectionOpenMeteo()

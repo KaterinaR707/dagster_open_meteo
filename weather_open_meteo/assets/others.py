@@ -1,4 +1,4 @@
-from dagster import op, Out, OpExecutionContext, asset
+from dagster import op, Out, OpExecutionContext, asset, AssetKey
 from weather_open_meteo.resources.resources import ConnectionOpenMeteo
 from typing import Tuple
 from weather_open_meteo.assets import constants
@@ -6,16 +6,24 @@ import sqlite3
 import yaml
 
 
-@asset
-def data_from_api(
+@op(
+    out={
+        "weather_data": Out(),
+        "city_data": Out()
+    },
+    required_resource_keys={"connection_resource"}
+)
+def load_data_from_api(
+    context,
     url_path,
-    city_data:dict, 
-    connection: ConnectionOpenMeteo,
+    city_data:dict,
     type_op: str,
     period: str,
     config_path:str
 ) -> Tuple[dict, dict]:
     
+    
+    connection = context.resources.connection
     weather_data = connection.request(
         url_path=url_path,
         params_city=city_data,
@@ -26,8 +34,8 @@ def data_from_api(
     
     return (weather_data, city_data)
     
-@asset
-def data_in_sqlite(
+@op
+def insert_data_in_sqlite(
     context: OpExecutionContext,
     city_data,
     weather_data,

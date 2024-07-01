@@ -5,7 +5,7 @@ OPEN_METEO_AIR_QUALITY = "https://air-quality-api.open-meteo.com/v1/air-quality"
 WEATHER_CONFIG = "weather_open_meteo/resources/weather_config.yaml"
 CITY_CONFIG = "weather_open_meteo/resources/config_city.yaml"
 
-START_DATE = "2024-04-01"
+START_DATE = "2024-04-30"
 END_DATE = "2024-04-30"
 
 PERIOD_ARCHIVE = "daily"
